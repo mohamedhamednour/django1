@@ -18,10 +18,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('demo/',include('demo.url')),
-    path('project', include('project.urls')),
 
-    # path('hamed/', views.home),
-    # path('', views.index, name='index'),
-# path('<str:room_name>/', views.room, name='room'),
 ]
