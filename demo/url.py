@@ -24,7 +24,7 @@ urlpatterns = [
     path('hamed/', views.home),
     path('del/<int:st_id>/',views.detils ,name='detils'),
     path('name/<str:st_name>/', views.detil, name='detil'),
-    path('na', views.signup, name='sign'),
+    path('signup', views.signup, name='sign'),
     # path('', views.login, name='de'),
     path('logut',views.logOut , name='logut'),
     path('viewuser',views.viewuser,name='vewiu'),
