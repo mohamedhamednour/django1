@@ -2,13 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+class Categories(models.Model):
+    title = models.CharField(max_length=50)
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return self.title
 
 class Projects(models.Model):
     Project_id = models.AutoField(primary_key=True)
     Project_name = models.CharField(max_length=50)
     Project_details = models.CharField(max_length=500)
-
+    category = models.ForeignKey(
+        'Categories', null=True, on_delete=models.CASCADE)
     Total_target = models.IntegerField()  # 5000
     Total_donations = models.IntegerField()  # 2000
     Avg_rate = models.FloatField()
